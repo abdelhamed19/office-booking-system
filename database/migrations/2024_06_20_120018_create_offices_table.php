@@ -34,6 +34,8 @@ return new class extends Migration
             $table->foreignId('tag_id')->index();
             $table->unique(['office_id','tag_id']);
         });
+
+        Office::factory()->count(3)->create();
     }
 
     /**
